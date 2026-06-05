@@ -24,14 +24,14 @@
 
 .nav-links {
   display: flex;
-  gap: 35px;
+  gap: 50px;
   list-style: none;
   padding-right: 30px;
 }
 
 .nav-links li {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: #333;
 }
