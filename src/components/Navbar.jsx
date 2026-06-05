@@ -1,5 +1,7 @@
 import "./Navbar.css";
 import logoIcon from "../assets/logoicon.png";
+import { FaMapMarkerAlt, FaUserPlus } from "react-icons/fa";
+import { FiLogIn } from "react-icons/fi";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -16,10 +18,22 @@ function Navbar() {
         <li>About</li>
       </ul>
 
-      <div className="buttons">
-        <button className="login">Login</button>
-        <button className="signup">Sign Up</button>
-      </div>
+     <div className="nav-buttons">
+  <div className="location">
+    <FaMapMarkerAlt />
+    <span>Mumbai</span>
+  </div>
+
+  <div className="login-section">
+    <FiLogIn />
+    <span>Login</span>
+  </div>
+
+  <button className="signup-btn">
+    <FaUserPlus />
+    <span>Sign Up</span>
+  </button>
+</div>
     </nav>
   );
 }
