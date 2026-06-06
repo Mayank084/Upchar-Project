@@ -98,12 +98,41 @@
   font-weight: 600;
   font-family: "Inter", sans-serif;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
 }
 
-.search-box button:hover {
-  background: #0d9488;
-  transform: translateY(-1px);
+.search-box button span {
+  position: relative;
+  display: inline-block;
+}
+
+.search-box button::before,
+.search-box button::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: transform 0.5s ease;
+  transform: scale(0);
+}
+
+.search-box button::before {
+  top: -60px;
+  left: -30px;
+}
+
+.search-box button::after {
+  bottom: -60px;
+  right: -30px;
+  transition-delay: 0.1s;
+}
+
+.search-box button:hover::before,
+.search-box button:hover::after {
+  transform: scale(1.8);
 }
 
 /* ── CTA Buttons ─────────────────────────────── */
