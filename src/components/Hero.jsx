@@ -13,14 +13,14 @@ function Hero() {
           </div>
 
           <h1>
-            Compare
+           Compare
             <br />
-            <span>Healthcare</span> Prices.
+               <span className="green">Healthcare</span> Prices.
+                   <br />
+                    Book Appointments
             <br />
-            Book Appointments
-            <br />
-            Smarter.
-          </h1>
+               <span className="blue">Smarter.</span> 
+                  </h1>
 
           <p>
             Search medical tests, compare hospital prices,
@@ -34,7 +34,9 @@ function Hero() {
               type="text"
               placeholder="Search Blood Test, MRI, CT Scan..."
             />
-            <button>Search</button>
+
+           <button>Search</button>
+
           </div>
 
           <div className="hero-buttons">

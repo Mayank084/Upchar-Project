@@ -41,8 +41,12 @@
   letter-spacing: -1.5px;
 }
 
-.hero-left h1 span {
-  color: #14b8a6;
+.hero-left h1 span.green {
+  color: #14b8a6 !important;
+}
+
+.hero-left h1 span.blue {
+  color: #3b82f6 !important;
 }
 
 .hero-left p {
@@ -92,7 +96,6 @@
   padding: 13px 26px;
   border: none;
   border-radius: 10px;
-  background: #14b8a6;
   color: white;
   font-size: 15px;
   font-weight: 600;
@@ -100,39 +103,42 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  background: transparent;
+  transition: color 0.3s;
 }
 
-.search-box button span {
-  position: relative;
-  display: inline-block;
-}
-
-.search-box button::before,
 .search-box button::after {
   content: '';
   position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  transition: transform 0.5s ease;
-  transform: scale(0);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0066ff;
+  border-radius: 10px;
+  z-index: -2;
 }
 
 .search-box button::before {
-  top: -60px;
-  left: -30px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0b69b0;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+  z-index: -1;
 }
 
-.search-box button::after {
-  bottom: -60px;
-  right: -30px;
-  transition-delay: 0.1s;
+.search-box button:hover::before {
+  width: 100%;
 }
 
-.search-box button:hover::before,
-.search-box button:hover::after {
-  transform: scale(1.8);
+.search-box button:hover {
+  color: white;
 }
 
 /* ── CTA Buttons ─────────────────────────────── */
