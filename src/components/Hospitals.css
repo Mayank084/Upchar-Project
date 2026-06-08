@@ -47,7 +47,7 @@
 
 .hospital-card:hover {
   transform: translateY(-10px);
-
+  
   box-shadow:
     0 20px 50px rgba(20,184,166,.15);
 }
@@ -93,24 +93,36 @@
 }
 
 .hospital-content button {
-  width: 100%;
-
+ padding: 25px 105px;
   border: none;
-
-  padding: 14px;
-
-  border-radius: 12px;
-
-  background: linear-gradient(
-    135deg,
-    #14b8a6,
-    #06b6d4
-  );
-
+  border-radius: 10px;
+  background: #14b8a6;
   color: white;
-
-  font-size: 16px;
-  font-weight: 600;
-
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hospital-content button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #00aea9;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.hospital-content button:hover::before {
+  width: 100%;
+}
+
+.hospital-content button:hover {
+  transform: translateY(-1px);
+  background-color: #009c8a;
 }
