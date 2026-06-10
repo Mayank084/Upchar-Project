@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logoIcon from "../assets/logoicon.png";
 import { FaMapMarkerAlt, FaUserPlus } from "react-icons/fa";
@@ -11,12 +12,12 @@ function Navbar() {
 
 
       <ul className="nav-links">
-        <li>Home</li>
-        <li>Tests</li>
-        <li>Hospitals</li>
-        <li>Doctors</li>
-        <li>About</li>
-      </ul>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/tests">Tests</Link></li>
+  <li><Link to="/hospitals">Hospitals</Link></li>
+  <li><Link to="/doctors">Doctors</Link></li>
+  <li><Link to="/about">About</Link></li>
+</ul>
 
      <div className="nav-buttons">
   <div className="location">
@@ -24,16 +25,18 @@ function Navbar() {
     <span>Mumbai</span>
   </div>
 
-  <div className="login-section">
-    <FiLogIn />
-    <span>Login</span>
-  </div>
+ <Link to="/login" className="login-section">
+  <FiLogIn />
+  <span>Login</span>
+</Link>
 
-  <button className="signup-btn">
-    <FaUserPlus />
-    <span>Sign Up</span>
-  </button>
-</div>
+ <Link to="/signup" className="signup-btn">
+  <FaUserPlus />
+  <span>Sign Up</span>
+</Link>
+
+  </div> {/* closes nav-buttons */}
+
     </nav>
   );
 }

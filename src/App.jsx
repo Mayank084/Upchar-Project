@@ -1,26 +1,42 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Tests from "./components/Tests";
-import Hospitals from "./components/Hospitals";
-import Doctors from "./components/Doctors";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import DoctorsPage from "./pages/DoctorsPage";
+import HospitalsPage from "./pages/HospitalsPage";
+import TestsPage from "./pages/TestsPage";
+import About from "./pages/About";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+
       <Navbar />
-      <Hero />
-      <Tests />
-      <Hospitals />
-      <Doctors />
-      <HowItWorks />
-      <Testimonials />
-      <CTA />
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/signup" element={<Signup />} />
+
+        <Route path="/doctors" element={<DoctorsPage />} />
+
+        <Route path="/hospitals" element={<HospitalsPage />} />
+
+        <Route path="/tests" element={<TestsPage />} />
+
+        <Route path="/about" element={<About />} />
+
+      </Routes>
+
       <Footer />
-    </>
+
+    </BrowserRouter>
   );
 }
 
