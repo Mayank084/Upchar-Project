@@ -1,0 +1,199 @@
+.hospitals-page {
+min-height: 100vh;
+background: #f8fafc;
+padding: 60px;
+}
+
+.hospital-hero {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.hospital-hero span {
+color: #14b8a6;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.hospital-hero h1 {
+font-size: 56px;
+color: #0f172a;
+margin: 15px 0;
+}
+
+.hospital-hero p {
+color: #64748b;
+max-width: 700px;
+margin: auto;
+line-height: 1.8;
+}
+
+.search-area {
+margin-top: 30px;
+display: flex;
+justify-content: center;
+}
+
+.search-area input {
+width: 500px;
+padding: 18px;
+
+border: none;
+outline: none;
+
+background: white;
+
+border-radius: 16px 0 0 16px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.05);
+}
+
+.search-area button {
+padding: 18px 28px;
+
+border: none;
+
+cursor: pointer;
+
+color: white;
+
+font-weight: 700;
+
+border-radius: 0 16px 16px 0;
+
+background:
+linear-gradient(
+135deg,
+#14b8a6,
+#06b6d4
+);
+}
+
+.hospital-grid {
+display: grid;
+
+grid-template-columns:
+repeat(auto-fit, minmax(350px,1fr));
+
+gap: 30px;
+}
+
+.hospital-card {
+background: white;
+
+border-radius: 24px;
+
+overflow: hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+
+transition: .35s;
+}
+
+.hospital-card:hover {
+transform: translateY(-10px);
+
+box-shadow:
+0 25px 50px rgba(0,0,0,.12);
+}
+
+.hospital-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+
+.hospital-content {
+padding: 25px;
+}
+
+.rating {
+display: inline-block;
+
+padding: 8px 14px;
+
+border-radius: 50px;
+
+background:
+rgba(20,184,166,.12);
+
+color: #14b8a6;
+
+font-weight: 700;
+
+margin-bottom: 15px;
+}
+
+.hospital-content h3 {
+color: #0f172a;
+margin-bottom: 10px;
+}
+
+.hospital-content p {
+color: #64748b;
+margin-bottom: 10px;
+}
+
+.hospital-content span {
+display: block;
+
+color: #14b8a6;
+
+font-weight: 600;
+
+margin-bottom: 20px;
+}
+
+.hospital-content button {
+width: 100%;
+
+padding: 16px;
+
+border: none;
+
+border-radius: 14px;
+
+cursor: pointer;
+
+font-weight: 700;
+
+background: #39ff14;
+
+color: #081028;
+
+transition: .3s;
+}
+
+.hospital-content button:hover {
+background: #0f172a;
+
+color: white;
+
+box-shadow:
+0 0 20px rgba(37,99,235,.4);
+}
+
+@media (max-width: 768px) {
+
+.hospitals-page {
+padding: 30px 20px;
+}
+
+.hospital-hero h1 {
+font-size: 38px;
+}
+
+.search-area {
+flex-direction: column;
+gap: 12px;
+}
+
+.search-area input,
+.search-area button {
+width: 100%;
+border-radius: 14px;
+}
+
+}
