@@ -7,42 +7,57 @@ function Login() {
 
       <div className="login-left">
 
-  <div className="bg-glow glow-1"></div>
-  <div className="bg-glow glow-2"></div>
+  <div className="dashboard-preview">
 
-  <div className="illustration-card">
-
-    <div className="medical-icon">
-      🏥
+    <div className="dashboard-header">
+      <div className="dot red"></div>
+      <div className="dot yellow"></div>
+      <div className="dot green"></div>
     </div>
 
-    <h1>
-      Smarter Healthcare
-      <br />
-      Starts Here
-    </h1>
+    <div className="dashboard-content">
 
-    <p>
-      Compare hospitals, find doctors,
-      book tests and manage appointments
-      effortlessly.
-    </p>
+      <div className="appointment-card">
+        <span className="badge">Upcoming Appointment</span>
 
-    <div className="stats-box">
+        <h3>Dr. Priya Sharma</h3>
 
-      <div className="stat">
-        <h3>500+</h3>
-        <span>Hospitals</span>
+        <p>Cardiologist • Tomorrow 10:30 AM</p>
       </div>
 
-      <div className="stat">
-        <h3>1000+</h3>
-        <span>Doctors</span>
+      <div className="dashboard-row">
+
+        <div className="mini-card">
+          <h4>500+</h4>
+          <span>Hospitals</span>
+        </div>
+
+        <div className="mini-card">
+          <h4>1000+</h4>
+          <span>Doctors</span>
+        </div>
+
       </div>
 
-      <div className="stat">
-        <h3>4.9★</h3>
-        <span>Rating</span>
+      <div className="test-card">
+        <div>
+          <h4>MRI Scan</h4>
+          <p>Booked Successfully</p>
+        </div>
+
+        <span className="status">
+          Confirmed
+        </span>
+      </div>
+
+      <div className="chart-card">
+
+        <div className="chart-bar h1"></div>
+        <div className="chart-bar h2"></div>
+        <div className="chart-bar h3"></div>
+        <div className="chart-bar h4"></div>
+        <div className="chart-bar h5"></div>
+
       </div>
 
     </div>

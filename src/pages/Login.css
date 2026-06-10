@@ -15,7 +15,12 @@
   align-items: center;
   justify-content: center;
 
-  background-color: #06b6d4;
+  background:
+  linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef6ff
+  );
 
   padding: 60px;
 }
@@ -144,8 +149,7 @@
 
 .status {
   background: #dcfce7;
-
-  color: #16a34a;
+  color: #22c55e;
 
   padding: 8px 14px;
 
@@ -216,7 +220,7 @@
   border-radius: 30px;
 
   box-shadow:
-    0 20px 60px rgba(0,0,0,.1);
+    0 20px 60px rgba(19, 204, 255, 0.686);
 }
 
 .login-tag {
@@ -323,7 +327,7 @@
 
   background: #14b8a6;
 
-  color: #081028;
+  color: #ffffff;
 
   font-size: 16px;
   font-weight: 700;
@@ -334,7 +338,7 @@
 }
 
 .login-btn:hover {
-  background: #0f172a;
+  background: #00d3b7;
 
   color: white;
 
