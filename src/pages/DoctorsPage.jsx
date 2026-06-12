@@ -1,4 +1,5 @@
 import "./DoctorsPage.css";
+import { Link } from "react-router-dom";
 
 function DoctorsPage() {
   const doctors = [
@@ -74,9 +75,12 @@ function DoctorsPage() {
 
               </div>
 
-              <button className="book-btn">
+              <Link
+                 to="/doctor-details"
+                 className="book-btn"
+                       >
                 Book Appointment
-              </button>
+                 </Link>
 
             </div>
 

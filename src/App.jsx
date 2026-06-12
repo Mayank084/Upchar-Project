@@ -9,6 +9,7 @@ import DoctorsPage from "./pages/DoctorsPage";
 import HospitalsPage from "./pages/HospitalsPage";
 import TestsPage from "./pages/TestsPage";
 import About from "./pages/About";
+import DoctorDetails from "./pages/DoctorDetails";
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/doctors" element={<DoctorsPage />} />
-
+         
+        <Route path="/doctor-details" element={<DoctorDetails />}/>
+        
       </Routes>
 
       <Footer />
