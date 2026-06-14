@@ -2,7 +2,29 @@ import "./Dashboard.css";
 
 function Dashboard() {
   return (
-    <div className="dashboard-page">
+       
+    <div className="dashboard-page"> 
+
+        <div className="dashboard-layout">
+
+  <aside className="dashboard-sidebar">
+
+    <div className="sidebar-logo">
+      <h2>Upchar</h2>
+    </div>
+
+    <ul>
+      <li className="active">Overview</li>
+      <li>Appointments</li>
+      <li>Tests</li>
+      <li>Reports</li>
+      <li>Profile</li>
+      <li>Settings</li>
+    </ul>
+
+  </aside>
+   
+   <main className="dashboard-main">
 
       {/* Welcome Section */}
 
@@ -156,7 +178,11 @@ function Dashboard() {
 
       </div>
 
+      </main>
+
     </div>
+
+    </div> 
   );
 }
 
