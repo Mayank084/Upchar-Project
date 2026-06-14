@@ -1,6 +1,10 @@
 import "./Dashboard.css";
+import { useState } from "react";
 
 function Dashboard() {
+   
+  const [activeTab, setActiveTab] = useState("overview");
+
   return (
        
     <div className="dashboard-page"> 
@@ -14,69 +18,98 @@ function Dashboard() {
     </div>
 
     <ul>
-      <li className="active">Overview</li>
-      <li>Appointments</li>
-      <li>Tests</li>
-      <li>Reports</li>
-      <li>Profile</li>
-      <li>Settings</li>
-    </ul>
+  <li
+    className={activeTab === "overview" ? "active" : ""}
+    onClick={() => setActiveTab("overview")}
+  >
+    Overview
+  </li>
+
+  <li
+    className={activeTab === "appointments" ? "active" : ""}
+    onClick={() => setActiveTab("appointments")}
+  >
+    Appointments
+  </li>
+
+  <li
+    className={activeTab === "tests" ? "active" : ""}
+    onClick={() => setActiveTab("tests")}
+  >
+    Tests
+  </li>
+
+  <li
+    className={activeTab === "reports" ? "active" : ""}
+    onClick={() => setActiveTab("reports")}
+  >
+    Reports
+  </li>
+
+  <li
+    className={activeTab === "profile" ? "active" : ""}
+    onClick={() => setActiveTab("profile")}
+  >
+    Profile
+  </li>
+
+  <li
+    className={activeTab === "settings" ? "active" : ""}
+    onClick={() => setActiveTab("settings")}
+  >
+    Settings
+  </li>
+</ul>
 
   </aside>
    
    <main className="dashboard-main">
 
-      {/* Welcome Section */}
-
-      <div className="welcome-card">
-
-        <div>
-          <h1>Hello, Mayank 👋</h1>
-
-          <p>
-            Manage your appointments, tests and
-            healthcare records in one place.
-          </p>
-        </div>
-
-        <button>
-          Book New Appointment
-        </button>
-
+    {activeTab === "overview" && (
+  <>
+    <div className="welcome-card">
+      <div>
+        <h1>Hello, Mayank 👋</h1>
+        <p>
+          Manage your appointments, tests and
+          healthcare records in one place.
+        </p>
       </div>
 
-      {/* Stats */}
+      <button>Book New Appointment</button>
+    </div>
 
-      <div className="stats-grid">
-
-        <div className="stat-card">
-          <h2>03</h2>
-          <span>Appointments</span>
-        </div>
-
-        <div className="stat-card">
-          <h2>05</h2>
-          <span>Tests Booked</span>
-        </div>
-
-        <div className="stat-card">
-          <h2>02</h2>
-          <span>Reports Ready</span>
-        </div>
-
-        <div className="stat-card">
-          <h2>4.9</h2>
-          <span>Health Score</span>
-        </div>
-
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h2>03</h2>
+        <span>Appointments</span>
       </div>
+
+      <div className="stat-card">
+        <h2>05</h2>
+        <span>Tests Booked</span>
+      </div>
+
+      <div className="stat-card">
+        <h2>02</h2>
+        <span>Reports Ready</span>
+      </div>
+
+      <div className="stat-card">
+        <h2>4.9</h2>
+        <span>Health Score</span>
+      </div>
+    </div>
+  </>
+          )
+      } 
 
       {/* Main Content */}
 
       <div className="dashboard-content">
 
         {/* Appointments */}
-
+         {activeTab === "appointments" && (
         <div className="dashboard-section">
 
           <h2>Upcoming Appointments</h2>
@@ -120,44 +153,27 @@ function Dashboard() {
           </div>
 
         </div>
+         )
+        }
 
         {/* Tests */}
 
-        <div className="dashboard-section">
+         {activeTab === "tests" && (
+          <div className="dashboard-section">
+           <h2>My Tests</h2>
 
-          <h2>Booked Tests</h2>
-
-          <div className="test-card">
-
+           <div className="test-card">
             <div>
-              <h3>Blood Test</h3>
+             <h3>Blood Test</h3>
+             <p>Completed</p>
+             </div>
 
-              <p>Home Collection</p>
+             <div className="status confirmed">
+              Ready
             </div>
-
-            <div className="status confirmed">
-              Completed
             </div>
-
-          </div>
-
-          <div className="test-card">
-
-            <div>
-              <h3>MRI Scan</h3>
-
-              <p>Scheduled Tomorrow</p>
             </div>
-
-            <div className="status pending">
-              Pending
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+             )}
 
       {/* Reminder */}
 
@@ -178,6 +194,83 @@ function Dashboard() {
 
       </div>
 
+      </div>
+
+      {activeTab === "reports" && (
+  <div className="dashboard-section">
+
+    <h2>Medical Reports</h2>
+
+    <div className="test-card">
+      <div>
+        <h3>Blood Test Report</h3>
+        <p>Available for Download</p>
+      </div>
+
+      <button className="view-btn">
+        Download
+      </button>
+    </div>
+
+    <div className="test-card">
+      <div>
+        <h3>MRI Report</h3>
+        <p>Generated Yesterday</p>
+      </div>
+
+      <button className="view-btn">
+        Download
+      </button>
+    </div>
+
+  </div>
+        )}
+
+        {activeTab === "profile" && (
+  <div className="dashboard-section">
+
+    <h2>My Profile</h2>
+
+    <div className="profile-box">
+
+      <h3>Mayank Sahu</h3>
+
+      <p>Email: mayank@email.com</p>
+
+      <p>Phone: +91 9876543210</p>
+
+      <p>Blood Group: O+</p>
+
+      <p>Gender: Male</p>
+
+    </div>
+
+  </div>
+)}
+
+{activeTab === "settings" && (
+  <div className="dashboard-section">
+
+    <h2>Settings</h2>
+
+    <div className="settings-box">
+
+      <button className="view-btn">
+        Change Password
+      </button>
+
+      <button className="view-btn">
+        Notification Settings
+      </button>
+
+      <button className="cancel-btn">
+        Logout
+      </button>
+
+    </div>
+
+  </div>
+)}
       </main>
 
     </div>
