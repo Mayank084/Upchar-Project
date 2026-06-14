@@ -126,9 +126,11 @@ function TestsPage() {
 
             <p>{test.report}</p>
 
-            <Link to="/login" className="test-btn">
-                       Book Test
-                       </Link>
+            <Link to="/dashboard"
+                className="test-btn"
+                   >
+                  Book Test
+            </Link>
 
           </div>
         ))}

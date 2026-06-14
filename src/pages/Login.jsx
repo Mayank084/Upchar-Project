@@ -1,7 +1,15 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";   
 
 function Login() {
+
+  const navigate = useNavigate();
+
+const handleLogin = () => {
+  navigate("/dashboard");
+};
+
   return (
     <div className="login-page">
 
@@ -105,8 +113,8 @@ function Login() {
               </a>
             </div>
 
-            <button className="login-btn">
-              Sign In
+            <button onClick={handleLogin}>
+             Login
             </button>
 
           </form>

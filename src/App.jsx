@@ -10,6 +10,7 @@ import HospitalsPage from "./pages/HospitalsPage";
 import TestsPage from "./pages/TestsPage";
 import About from "./pages/About";
 import DoctorDetails from "./pages/DoctorDetails";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
         <Route path="/doctors" element={<DoctorsPage />} />
 
         <Route path="/doctor-details" element={<DoctorDetails />}/> 
+
+        <Route path="/dashboard" element={<Dashboard />}/>
         
       </Routes>
 
