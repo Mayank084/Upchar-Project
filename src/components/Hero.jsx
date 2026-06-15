@@ -40,9 +40,9 @@ function Hero() {
           </div>
 
           <div className="hero-buttons">
-            <button className="primary-btn">
-              📅 Book Appointment
-            </button>
+            <button className="btn-primary">
+                Book Appointement 
+              </button>
 
             <button className="secondary-btn">
               🧪 Explore Tests
