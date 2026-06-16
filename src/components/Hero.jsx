@@ -1,6 +1,7 @@
 import "./Hero.css";
 import heroImage from "../assets/hero.png";
 import { FaHospital, FaUserMd } from "react-icons/fa";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 
 function Hero() {
   return (
@@ -30,7 +31,7 @@ function Hero() {
           </p>
 
           <div className="search-box">
-            <span className="search-icon">🔍</span>
+            <HiMagnifyingGlass className="search-icon" />
             <input
               type="text"
               placeholder="Search Blood Test, MRI, CT Scan..."
