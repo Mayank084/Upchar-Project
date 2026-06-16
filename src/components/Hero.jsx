@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImage from "../assets/hero.png";
+import { FaHospital, FaUserMd } from "react-icons/fa";
 
 function Hero() {
   return (
@@ -40,12 +41,12 @@ function Hero() {
           </div>
 
           <div className="hero-buttons">
-            <button className="btn-primary">
+            <button className="primary-btn">
                 Book Appointement 
               </button>
 
             <button className="secondary-btn">
-              🧪 Explore Tests
+                        Explore Tests
             </button>
           </div>
 
@@ -64,24 +65,35 @@ function Hero() {
             className="hero-image"
           />
 
-          <div className="floating-card card-1">
-            <span className="card-icon">🏥</span>
-            <div>
-              <div className="card-number">500+</div>
-              <div className="card-label">Hospitals</div>
-            </div>
-          </div>
+         <div className="floating-card card-1">
 
-          <div className="floating-card card-2">
-            <span className="card-icon">👨‍⚕️</span>
-            <div>
-              <div className="card-number">1000+</div>
-              <div className="card-label">Doctors</div>
-            </div>
-          </div>
+  <div className="card-icon">
+    <FaHospital />
+  </div>
 
-        </div>
+  <div>
+    <div className="card-number">500+</div>
+    <div className="card-label">
+      Partner Hospitals
+    </div>
+  </div>
 
+</div>
+
+<div className="floating-card card-2">
+
+  <div className="card-icon">
+    <FaUserMd />
+  </div>
+
+  <div>
+    <div className="card-number">1000+</div>
+    <div className="card-label">
+      Verified Doctors
+    </div>
+  </div>
+</div>
+</div>
       </section>
 
       {/* Features Bar */}

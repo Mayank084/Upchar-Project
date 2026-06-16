@@ -207,7 +207,7 @@ function Dashboard() {
         <p>Available for Download</p>
       </div>
 
-      <button className="view-btn">
+      <button className="btn-primary">
         Download
       </button>
     </div>
@@ -218,7 +218,7 @@ function Dashboard() {
         <p>Generated Yesterday</p>
       </div>
 
-      <button className="view-btn">
+      <button className="btn-primary">
         Download
       </button>
     </div>

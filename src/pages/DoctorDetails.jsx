@@ -1,4 +1,5 @@
 import "./DoctorDetails.css";
+import { Link } from "react-router-dom";
 
 function DoctorDetails() {
 return ( <div className="doctor-details-page">
@@ -77,9 +78,9 @@ return ( <div className="doctor-details-page">
         <span>₹800</span>
       </div>
 
-      <button className="book-btn">
-        Book Appointment
-      </button>
+      <Link to="/dashboard"  className="book-btn">
+            Book Appointment
+      </Link>
 
     </div>
 
