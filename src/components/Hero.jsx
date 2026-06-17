@@ -1,6 +1,10 @@
 import "./Hero.css";
 import heroImage from "../assets/hero.png";
-import { FaHospital, FaUserMd } from "react-icons/fa";
+import {
+  HiUserGroup,
+  HiStar,
+  HiShieldCheck
+} from "react-icons/hi2";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 
 function Hero() {
@@ -16,12 +20,10 @@ function Hero() {
 
           <h1>
            Compare
+               <span className="green">prices</span>
             <br />
-               <span className="green">Healthcare</span> Prices.
-                   <br />
-                    Book Appointments
-            <br />
-               <span className="blue">Smarter.</span> 
+            book 
+               <span className="blue">Appointments</span> 
                   </h1>
 
           <p>
@@ -66,32 +68,36 @@ function Hero() {
             className="hero-image"
           />
 
-         <div className="floating-card card-1">
-
-  <div className="card-icon">
-    <FaHospital />
+         <div className="stat-card stat-top">
+  <div className="stat-icon">
+    <HiStar />
   </div>
 
   <div>
-    <div className="card-number">500+</div>
-    <div className="card-label">
-      Partner Hospitals
-    </div>
+    <span>Patient Rating</span>
+    <h3>4.9 <small>/5.0</small></h3>
   </div>
-
 </div>
 
-<div className="floating-card card-2">
-
-  <div className="card-icon">
-    <FaUserMd />
+<div className="stat-card stat-right">
+  <div className="stat-icon rating">
+    <HiUserGroup />
   </div>
 
   <div>
-    <div className="card-number">1000+</div>
-    <div className="card-label">
-      Verified Doctors
-    </div>
+    <span>Happy Patients</span>
+    <h3>2M+</h3>
+  </div>
+</div>
+
+<div className="stat-card stat-bottom">
+  <div className="stat-icon secure">
+    <HiShieldCheck />
+  </div>
+
+  <div>
+    <span>Verified</span>
+    <h3>100% Secure</h3>
   </div>
 </div>
 </div>
