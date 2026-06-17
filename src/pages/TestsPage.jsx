@@ -111,10 +111,10 @@ function TestsPage() {
 
       {/* Tests Grid */}
 
-      <section className="tests-grid">
+      <section className="test-page-grid">
 
         {tests.map((test, index) => (
-          <div className="test-card" key={index}>
+          <div className="test-page-card" key={index}>
 
             <h3>{test.name}</h3>
 
@@ -127,7 +127,7 @@ function TestsPage() {
             <p>{test.report}</p>
 
             <Link to="/dashboard"
-                className="test-btn"
+                className="test-page-btn"
                    >
                   Book Test
             </Link>

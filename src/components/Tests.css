@@ -21,9 +21,9 @@
 }
 
 .section-tag {
-  display: inline-block;  
+  display: inline-block;
   background: rgba(20, 184, 166, 0.10);
-  color: #ffffff;
+  color: #0d9488;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -58,8 +58,13 @@
 /* ── Grid ────────────────────────────────────── */
 .tests-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;  
+
+  margin-top: 50px;
 }
 
 /* ── Card ────────────────────────────────────── */
@@ -156,7 +161,7 @@
   padding: 10px 22px;
   border: none;
   border-radius: 10px;
-  background: #14b8a6;
+  background: #14B8A6;
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -185,8 +190,8 @@
 
 .test-card button:hover {
   transform: translateY(-1px);
-  background-color: #00ffe1ac;
-  box-shadow: 0 6px 16px rgb(0, 255, 208);
+  background-color: #0D9488;
+  box-shadow: 0 6px 16px rgba(7, 138, 114, 0.562);
 }
 
 /* ── Responsive ──────────────────────────────── */

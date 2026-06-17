@@ -1,4 +1,4 @@
-    .tests-page {
+    .tests-page-card {
   background: #f8fafc;
   padding: 40px;
 }
@@ -183,7 +183,7 @@
 
 /* TESTS */
 
-.tests-grid {
+.test-page-grid {
   display: grid;
 
   grid-template-columns:
@@ -194,7 +194,7 @@
   margin-bottom: 60px;
 }
 
-.test-card {
+.test-page-card {
   background: white;
 
   padding: 30px;
@@ -207,7 +207,7 @@
   transition: .3s;
 }
 
-.test-card:hover {
+.test-page-card:hover {
   transform: translateY(-10px);
 }
 
@@ -227,11 +227,11 @@
   font-size: 14px;
 }
 
-.test-card h2 {
+.test-page-card h2 {
   color: #14b8a6;
 }
 
-.test-card button {
+.test-page-card button {
   width: 100%;    
 
   margin-top: 20px;
@@ -251,7 +251,7 @@
   transition: .3s;
 }
 
-.test-card button:hover {
+.test-page-card button:hover {
   background: #081028;
   color: white;
 }
@@ -290,7 +290,7 @@
 
   font-weight: 600;
 }
-.test-btn {
+.test-page-btn {
   width: 100%;
 
   display: block;
@@ -314,7 +314,7 @@
   transition: .3s;
 }
 
-.test-btn:hover {
+.test-page-btn:hover {
   background: #081028;
 
   color: white;
