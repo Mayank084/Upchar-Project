@@ -1,4 +1,5 @@
 import "./Tests.css";
+import { useNavigate } from "react-router-dom";
 
 import {
   Droplets,
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 
 function Tests() {
+  const navigate = useNavigate();
+
   const tests = [
     {
       icon: <Droplets size={32} />,
@@ -45,16 +48,30 @@ function Tests() {
 
   return (
     <section className="tests-section">
-      <div className="section-title">
-        <span>POPULAR TESTS</span>
 
-        <h2>Book Medical Tests Online</h2>
+  <div className="section-header">
 
-        <p>
-          Compare prices and book diagnostic tests from trusted healthcare
-          providers.
-        </p>
-      </div>
+    <div className="section-title">
+
+      <span>POPULAR TESTS</span>
+
+      <h2>Book Medical Tests Online</h2>
+
+      <p>
+        Compare prices and book diagnostic tests
+        from trusted healthcare providers.
+      </p>
+
+    </div>
+
+    <button
+      className="view-all-btn"
+      onClick={() => navigate("/tests")}
+    >
+      View all
+    </button>
+
+  </div>
 
       <div className="tests-grid">
         {tests.map((test, index) => (

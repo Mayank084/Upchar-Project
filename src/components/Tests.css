@@ -6,8 +6,7 @@
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 60px;
+  text-align:left ;
 }.tests-section {
   max-width: 1400px;
   margin: 100px auto;
@@ -15,44 +14,59 @@
 }
 
 /* ── Section title ───────────────────────────── */
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
+.section-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
 }
 
-.section-tag {
-  display: inline-block;
-  background: rgba(20, 184, 166, 0.10);
-  color: #0d9488;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  padding: 6px 16px;
-  border-radius: 50px;
-  border: 1px solid rgba(20, 184, 166, 0.2);
-  margin-bottom: 16px;
+.view-all-btn {
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  border: 1px solid #14B8A6 ;
+
+  background: white;
+
+  color: #14B8A6;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-right: 60px;
+
+  margin-top: 50px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+
+  box-shadow:
+    0 6px 20px rgba(15,23,42,.05);
 }
 
-.section-title h2 {
-  font-size: 48px;
-  font-weight: 800;
-  color: #081028;
-  margin: 0 0 16px;
-  font-family: "Inter", sans-serif;
-  letter-spacing: -1px;
-  line-height: 1.15;
-}
+.view-all-btn:hover {
 
-.section-title h2 span {
-  color: #14b8a6;
-}
+  background: linear-gradient(
+    90deg,
+    #14b8a6,
+    #22c1dc
+  );
 
-.section-title p {
-  color: #64748b;
-  font-size: 17px;
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.8;
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(20,184,166,.25);
 }
 
 /* ── Grid ────────────────────────────────────── */
@@ -223,7 +237,7 @@
 .section-title p {
   color: #64748b;
   font-size: 18px;
-  max-width: 650px;
+  max-width: 700px;
   margin: auto;
   line-height: 1.8;
 }
