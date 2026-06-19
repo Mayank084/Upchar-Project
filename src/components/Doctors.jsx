@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./Doctors.css";
 import { Star, BriefcaseMedical, ChevronLeft, ChevronRight, MapPin, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function Doctors() {
+  const navigate = useNavigate();
   const doctors = [
     {
       image: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -86,17 +88,42 @@ function Doctors() {
   return (
     <section className="doctors-section">
 
-      <div className="doctor-heading">
-        <span className="doctor-tag">OUR SPECIALISTS</span>
-        <h2>Find The <span>Right Doctor</span></h2>
-        <p>Connect with experienced doctors and book appointments instantly.</p>
-      </div>
+     <div className="section-header">
+
+  <div className="doctor-heading">
+
+    <span className="doctor-tag">
+      OUR SPECIALISTS
+    </span>
+
+    <h2>
+      Find The <span>Right Doctor</span>
+    </h2>
+
+    <p>
+      Connect with experienced doctors and
+      book appointments instantly.
+    </p>
+
+  </div>
+
+  <button
+    className="view-all-btn"
+    onClick={() => navigate("/doctors")}
+  >
+    View all →
+  </button>
+
+</div>
 
       <div className="slider-wrapper">
 
         <button className="slider-btn slider-btn--left" onClick={prev}>
           <ChevronLeft size={22} />
         </button>
+
+
+        
 
         <div className="doctor-grid">
           {visible_doctors.map((doctor, index) => (
