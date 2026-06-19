@@ -37,7 +37,7 @@ function HowItWorks() {
   return (
     <section className="how-section">
 
-      <div className="section-header">
+      <div className="hiw-section-header">
         <span>HOW IT WORKS</span>
         <h2>Healthcare In 4 Simple Steps</h2>
       </div>
