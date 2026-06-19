@@ -3,6 +3,8 @@ import "./Navbar.css";
 import logoIcon from "../assets/logoicon.png";
 import { FaMapMarkerAlt, FaUserPlus } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -11,14 +13,19 @@ function Navbar() {
       </div>
 
 
-      <ul className="nav-links">
-  <li><Link to="/">Home</Link></li>
-  <li><Link to="/tests">Tests</Link></li>
-  <li><Link to="/hospitals">Hospitals</Link></li>
-  <li><Link to="/doctors">Doctors</Link></li>
-  <li><Link to="/dashboard">Dashboard</Link></li>
-  <li><Link to="/about">About</Link></li>
-</ul>
+      <div className="nav-links">
+
+  <NavLink to="/">Home</NavLink>
+
+  <NavLink to="/tests">Tests</NavLink>
+
+  <NavLink to="/hospitals">Hospitals</NavLink>
+
+  <NavLink to="/doctors">Doctors</NavLink>
+
+  <NavLink to="/about">About</NavLink>
+
+</div>
 
      <div className="nav-buttons">
   <div className="location">

@@ -68,7 +68,7 @@ function Tests() {
       className="view-all-btn"
       onClick={() => navigate("/tests")}
     >
-      View all
+      View all →
     </button>
 
   </div>

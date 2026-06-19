@@ -1,6 +1,10 @@
 import "./Hospitals.css";
+import { useNavigate } from "react-router-dom";
 
 function Hospitals() {
+  
+  const navigate = useNavigate();
+
   const hospitals = [
     {
       image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800",
@@ -23,15 +27,31 @@ function Hospitals() {
   ];
 
   return (
-    <section className="hospitals-section">
 
-      <div className="hospital-title">
-        <span>TOP HOSPITALS</span>
-        <h2>Find The Best Hospitals Near You</h2>
-        <p>
-          Compare hospitals, check ratings and book appointments instantly.
-        </p>
-      </div>
+    
+    
+    <section className="hospitals-section">
+   
+
+  <div className="section-header">
+
+    <div className="hospital-title">
+    <span>TOP HOSPITALS</span>
+    <h2>Find The Best Hospitals Near You</h2>
+    <p>
+      Compare hospitals, check ratings and
+      book appointments instantly.
+    </p>
+  </div>
+
+  <button
+    className="view-all-btn"
+    onClick={() => navigate("/hospitals")}
+  >
+    View all →
+  </button>
+
+</div>
 
       <div className="hospital-grid">
 
